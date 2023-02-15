@@ -1,0 +1,14 @@
+<html>
+<script language="javascript">
+var source = new EventSource("http://localhost:8585");
+source.onmessage = function(event) {
+    document.getElementById("result").innerHTML = "<h3>Temperatura medida: " +
+event.data + "</h3>";
+};
+</script>
+<body>
+    <form>
+    <div id="result"></div>
+</form>
+</body>
+</html>
